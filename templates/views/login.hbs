@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Bis</title>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <div class="wrapper">
+            <form action="/login" method="post">
+                <h2>Login</h2>
+                <div class="input-group">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" name="email" placeholder="User Name" required>
+                </div>
+
+                <div class="input-group">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" name="pswd" placeholder="password" required>
+                </div>
+
+                <div class="forgot-pass">
+                    <a href="#">Forger Password</a>
+                </div>
+
+                <button type="submit" class="btn">Login</button>
+                <div class="sign-link">
+                    <p>Don't have an account? <a href="./register" class="register-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer></footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
