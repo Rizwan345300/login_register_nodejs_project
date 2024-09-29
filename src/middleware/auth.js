@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken');
+const Register = require('../model/uregister');
 
 const auth = async (req, res, next) => {
     try {
@@ -7,8 +8,9 @@ const auth = async (req, res, next) => {
             throw new Error('No token found');
         }
         const decoded = jwt.verify(token, process.env.SECRET_KEY);
+        const user = await Register.findOne({_id: decoded._id});
         
-        req.user = decoded._id;
+        req.user = user;
         req.token = token;
         next();
 
